@@ -5,7 +5,7 @@ function Home () {
     return (
         <React.Fragment>
             <h1>
-                Carga de la Home Page
+                Carga de la Home  
             </h1>
             <Listado/>
         </React.Fragment>
