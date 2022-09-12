@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { Link } from "react-router-dom";
 
-class Listado extends Component {
+class Cancion extends Component {
     constructor (props){
         super(props)
         this.state = {
@@ -20,13 +20,9 @@ class Listado extends Component {
     render(){
         return(
             <React.Fragment>
-                {this.state.datos === []?<h3>Cargando</h3>:
-                this.state.datos.map((Cancion, idx) => <Cancion datos={Cancion} key={idx}/>)
-                
-                }
             </React.Fragment>
         )
     }
 }
 
-export default Listado;
+export default Cancion;
