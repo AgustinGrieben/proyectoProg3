@@ -42,7 +42,7 @@ class Home extends Component {
                 </h1>
                 <form onSubmit={(event)=> this.prevenirRefresh(event)}>
                     <input onChange={(event)=> this.controlarCambiosDelInput(event)} value={this.state.valorInput} />
-                    <button>Hola</button>
+                    <button>Buscar</button>
                 </form>
                 
                 {this.state.resultadoBusqueda.length === 0?<h3>No se encontraron resultados de búsqueda</h3>:

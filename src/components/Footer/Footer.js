@@ -1,13 +1,13 @@
-import React, {Component} from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
-class Footer extends Component {
-    constructor (props){
-        super(props)
-        this.state = {
-            datos: []
-        }
-    }
+function Footer() {
+    return (
+        <div>
+            <h4>Julian Araujo</h4>
+            <h4>Agustín Grieben</h4>
+            <h4>Joaquín Guerrico</h4>
+        </div>
+    )
 }
 
 export default Footer;

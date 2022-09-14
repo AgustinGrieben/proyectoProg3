@@ -1,13 +1,9 @@
-import React, {Component} from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
-class Header extends Component {
-    constructor (props){
-        super(props)
-        this.state = {
-            datos: []
-        }
-    }
+function Header() {
+    return (
+        <p>aca iria el logo y el nombre</p>
+    )
 }
 
 export default Header;
