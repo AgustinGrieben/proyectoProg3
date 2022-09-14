@@ -54,14 +54,14 @@ class Home extends Component {
             :
             
             <React.Fragment>
-                <h1>
-                    Carga de la Home  
-                </h1>
                 <form onSubmit={(event)=> this.prevenirRefresh(event)}>
                     <input onChange={(event)=> this.controlarCambiosDelInput(event)} value={this.state.valorInput} />
                     <button>Buscar</button>
                 </form>
-                <Listado/>
+                <h2>Canciones populares</h2>
+                <Listado canciones={true}/>
+                <h2>Albumes populares</h2>
+                <Listado canciones={false}/>
             </React.Fragment>
         )
     }
