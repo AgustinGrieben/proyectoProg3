@@ -1,25 +1,12 @@
-.ocultar{
-    display: none;
-}
-
-.mostrar{
-    display: block;
-}
-.main-musica{
-    
-        display: flex;
-    flex-wrap: wrap;
-}
 .musica{
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     text-align: center;
+    width: 97%;
     margin-bottom: 50px;
     margin-left: 23px;
     justify-content: space-around;
     background-color: aqua;
-    width: 20%;
-    
 }
 
 .img-musica{
@@ -28,4 +15,3 @@
     margin: 20px;
     border-radius: 28px;
 }
-

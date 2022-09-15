@@ -1,0 +1,26 @@
+.logo {
+    width: 50%;
+  }
+  
+    .main-nav {
+      justify-content: space-around;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background-color: lightblue;
+      height: 150px;
+      margin-bottom: 30px;
+    }
+  
+    .main-nav li {
+      width: 15%;
+      list-style-type: none;
+      font-size: larger;
+      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+  
+  .main-nav li a {
+    color: black;
+    text-decoration: none;
+  }
+  

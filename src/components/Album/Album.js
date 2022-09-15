@@ -19,11 +19,13 @@ class Album extends Component {
     render(){
         return(
             <React.Fragment>
-                <Link><img src={this.props.datos.cover_medium}/></Link>
+                <nav className="musica">
+                <Link><img className="img-musica" src={this.props.datos.cover_medium}/></Link>
                 <h2>{this.props.datos.title}</h2>
                 <p className={this.state.clase}>{this.props.datos.artist.name}</p>
                 <p onClick={() => this.verMas()}>{this.state.texto}</p>
                 <p>Agregar a favoritos</p>
+                </nav>
             </React.Fragment>
         )
     }
