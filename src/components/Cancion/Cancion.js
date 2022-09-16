@@ -26,6 +26,7 @@ class Cancion extends Component {
                 <h2>{this.props.datos.title}</h2>
                 <p className={this.state.clase}>{this.props.datos.artist.name}</p>
                 <p onClick={() => this.verMas()}>{this.state.texto}</p>
+                <p><link to={"/Detail/"}></link></p>
                 <p>Agregar a favoritos</p>
                 
                 </article>
