@@ -1,9 +1,10 @@
 import React from "react";
+import ListadoTodas from "../../components/ListadoTodas/ListadoTodas";
 
 
 function AlbumesPopulares() {
     return (
-        <p>Esta es la screen de Abbumes populares</p>
+        <ListadoTodas canciones={false}/>
     )
 }
 
