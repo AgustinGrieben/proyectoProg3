@@ -19,12 +19,14 @@ class Listado extends Component {
                     })
                     .catch(error=>console.log('El error fue: ' + error))
     }
+    
     render(){
         return(
             <React.Fragment>
                 {this.state.datos === []?<h3>Cargando</h3>:
                 this.state.datos.map((cancion, idx) =>   this.props.canciones ?  <Cancion datos={cancion} key={idx}/> : <Album datos={cancion} key={idx}/>
                 )}
+                <Link to= {this.props.canciones ?  `/cancionesPopulares` :  `/albumesPopulares`}   > TOP Chart {this.props.canciones ?  `Canciones` :  `Albumes`} </Link>
             </React.Fragment>
         )
     }

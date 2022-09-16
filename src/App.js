@@ -3,6 +3,8 @@ import { Route, Switch } from 'react-router-dom';
 import Home from './screens/Home/Home';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import CancionesPopulares from './screens/cancionesPopulares/CancionesPopulares';
+import AlbumesPopulares from './screens/albumesPopulares/AlbumesPopulares';
 
 function App() {
   return (
@@ -13,7 +15,9 @@ function App() {
       
       <main>
         <Switch>
-          <Route path="/" component={Home}/>
+          <Route path="/" exact={true} component={Home}/>
+          <Route path="/cancionesPopulares" component={CancionesPopulares}/>
+          <Route path="/albumesPopulares" component={AlbumesPopulares}/>
         </Switch>
       </main>
       
