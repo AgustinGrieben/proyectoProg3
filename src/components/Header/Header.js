@@ -9,6 +9,7 @@ function Header() {
                 <li><img className='logo'src='/img/logoTurnedUp.png' alt=''/> </li>
                 <li><Link to='/'> Home </Link></li>
                 <li><Link to='/favoritos'> Favoritos </Link></li>
+                <li><Link to='/vertodas'> Ver Todas </Link></li>
             </ul>
         </nav>
     )
