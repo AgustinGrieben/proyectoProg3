@@ -6,6 +6,7 @@ import Footer from './components/Footer/Footer';
 import CancionesPopulares from './screens/cancionesPopulares/CancionesPopulares';
 import AlbumesPopulares from './screens/albumesPopulares/AlbumesPopulares';
 import DetailCancion from './screens/DetailCancion/DetailCancion';
+import DetailAlbum from './screens/DetailAlbum/DetailAlbum';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/cancionesPopulares" component={CancionesPopulares}/>
           <Route path="/albumesPopulares" component={AlbumesPopulares}/>
           <Route path="/DetailCancion" component={DetailCancion}/>
+          <Route path="/DetailAlbum" component={DetailAlbum}/>
         </Switch>
       </main>
       
