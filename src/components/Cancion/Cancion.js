@@ -18,10 +18,12 @@ class Cancion extends Component {
 
     render(){
         return(
-            <React.Fragment> 
-                
-                <article className="musica">
+            
 
+            <React.Fragment> 
+
+                <div className="musica">
+                
                 <Link><img className="img-musica" src={this.props.datos.album.cover_medium}/></Link>
                 <h2>{this.props.datos.title}</h2>
                 <p className={this.state.clase}>{this.props.datos.artist.name}</p>
@@ -29,10 +31,9 @@ class Cancion extends Component {
                 <p><link to={"/Detail/"}></link></p>
                 <p>Agregar a favoritos</p>
                 
-                </article>
-                
-                
+                </div>
             </React.Fragment>
+            
         )
     }
 }
