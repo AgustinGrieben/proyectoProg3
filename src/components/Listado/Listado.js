@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Cancion from "../Cancion/Cancion";
 import Album from '../Album/Album';
 import DetalleCancion from "../DetalleCancion/DetalleCancion";
+import DetalleAlbum from "../DetalleAlbum/DetalleAlbum";
 
 class Listado extends Component {
     constructor (props){
@@ -28,9 +29,9 @@ class Listado extends Component {
                 this.state.datos.map((cancion, idx) =>   this.props.canciones ?  <Cancion datos={cancion} key={idx}/> : <Album datos={cancion} key={idx}/>
                 )},
                 {this.state.datos === []?<h3>Cargando</h3>:
-                this.state.datos.map((cancion, idx) =>   this.props.canciones ?  <DetalleCancion datos={cancion} key={idx}/> : <DetalleCancion datos={cancion} key={idx}/>
+                this.state.datos.map((cancion, idx) =>   this.props.canciones ?  <DetalleCancion datos={cancion} key={idx}/> : <DetalleAlbum datos={cancion} key={idx}/>
                 )}
-                <Link to= {this.props.canciones ?  `/cancionesPopulares` :  `/albumesPopulares`}   > TOP Chart {this.props.canciones ?  `Canciones` :  `Albumes`} </Link>
+                <Link to= {this.props.canciones ?  `/cancionesPopulares` :  `/albumesPopulares`} > TOP Chart {this.props.canciones ?  `Canciones` :  `Albumes`} </Link>
             </React.Fragment>
         )
     }
