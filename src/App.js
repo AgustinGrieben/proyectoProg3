@@ -21,8 +21,8 @@ function App() {
           <Route path="/" exact={true} component={Home}/>
           <Route path="/cancionesPopulares" component={CancionesPopulares}/>
           <Route path="/albumesPopulares" component={AlbumesPopulares}/>
-          <Route path="/DetailCancion" component={DetailCancion}/>
-          <Route path="/DetailAlbum" component={DetailAlbum}/>
+          <Route path="/DetailCancion/id/:id" component={DetailCancion}/>
+          <Route path="/DetailAlbum/id/:id" component={DetailAlbum}/>
           <Route path='' component={NotFound}/>
         </Switch>
       </main>

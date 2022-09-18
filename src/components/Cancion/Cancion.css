@@ -20,6 +20,7 @@
     justify-content: space-around;
     background-color: aqua;
     max-width: min-content;
+    flex-direction: row;
 }
 
 .img-musica{
