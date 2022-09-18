@@ -9,7 +9,8 @@ function Header() {
                 <li><img className='logo'src='/img/logoTurnedUp.png' alt=''/> </li>
                 <li><Link to='/'> Home </Link></li>
                 <li><Link to='/favoritos'> Favoritos </Link></li>
-                <li><Link to='/VerTodas'> Ver Todas </Link></li>
+                <li><Link to='/cancionesPopulares'> Canciones populares </Link></li>
+                <li><Link to='/albumesPopulares'> Albumes populares </Link></li>
             </ul>
         </nav>
     )

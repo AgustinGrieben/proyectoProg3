@@ -20,7 +20,7 @@ class Album extends Component {
         return(
             <React.Fragment>
                 <nav className="musica">
-                <Link><img className="img-musica" src={this.props.datos.cover_medium}/></Link>
+                <Link to={"/DetailAlbum/id/"+this.props.datos.id}><img className="img-musica" alt="" src={this.props.datos.cover_medium}/></Link>
                 <h2>{this.props.datos.title}</h2>
                 <p className={this.state.clase}>{this.props.datos.artist.name}</p>
                 <p onClick={() => this.verMas()}>{this.state.texto}</p>

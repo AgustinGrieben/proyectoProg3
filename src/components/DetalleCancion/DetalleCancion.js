@@ -9,8 +9,7 @@ class DetalleCancion extends Component {
         }
     }
     componentDidMount(){
-        console.log("aca");
-    fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/tracks/${this.props.id}`)
+    fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/track/${this.props.id}`)
     .then(resp => resp.json())
     .then(data =>{ this.setState({
       datos: data,
@@ -30,10 +29,10 @@ class DetalleCancion extends Component {
         return(
             <> 
                 {
-               this.state.ready ? <div>
+               this.state.datos.length !==0 ? <div>
                 <img 
                 src={this.state.datos.album.cover}
-                alt={`Una imagen de ${this.state.datos.album.cover}`}
+                alt={"/"}
             />
                 <h1>Cancion: {this.state.datos.title}</h1>
                 <h1>Artista: {this.state.datos.artist.name}</h1>
