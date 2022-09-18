@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import { Link } from "react-router-dom";
 import Cancion from "../Cancion/Cancion";
 import Album from '../Album/Album';
+import "../Cancion/Cancion.css"
 class Listado extends Component {
     constructor (props){
         super(props)
@@ -22,9 +23,11 @@ class Listado extends Component {
     render(){
         return(
             <React.Fragment>
+                <section className= "section">
                 {this.state.datos === []?<h3>Cargando</h3>:
                 this.state.datos.map((cancion, idx) =>   this.props.canciones ?  <Cancion datos={cancion} key={idx}/> : <Album datos={cancion} key={idx}/>
-                )},
+                )}
+                </section>
                 <Link to= {this.props.canciones ?  `/cancionesPopulares` :  `/albumesPopulares`} > TOP Chart {this.props.canciones ?  `Canciones` :  `Albumes`} </Link>
             </React.Fragment>
         )
