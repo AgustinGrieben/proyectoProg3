@@ -13,7 +13,7 @@ class Listado extends Component {
         }
     }
     componentDidMount(){
-        fetch( this.props.canciones ?  `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?limit=10` :  `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=10`)
+        fetch( this.props.canciones ?  `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/tracks&top?limit=8` :  `https://thingproxy.freeboard.io/fetch/https://api.deezer.com/chart/0/albums&top?limit=8`)
                     .then(response=>response.json())
                     .then(data=> {
                         {this.setState({datos: data.data})}
