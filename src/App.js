@@ -7,6 +7,7 @@ import CancionesPopulares from './screens/cancionesPopulares/CancionesPopulares'
 import AlbumesPopulares from './screens/albumesPopulares/AlbumesPopulares';
 import DetailCancion from './screens/DetailCancion/DetailCancion';
 import DetailAlbum from './screens/DetailAlbum/DetailAlbum';
+import NotFound from './screens/notFound/notFound';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/albumesPopulares" component={AlbumesPopulares}/>
           <Route path="/DetailCancion" component={DetailCancion}/>
           <Route path="/DetailAlbum" component={DetailAlbum}/>
+          <Route path='' component={NotFound}/>
         </Switch>
       </main>
       
