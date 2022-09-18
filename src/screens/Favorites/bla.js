@@ -1,12 +1,10 @@
 import React, {Component} from 'react'
-import Cancion from '../Cancion/Cancion'
 
-class Favoritos extends Component{
+class Favorites extends Component{
     constructor(props){
         super(props)
         this.state={
-            datos: [],
-            ready: false,
+            personajesFavoritos: []
         }
     }
 
@@ -17,26 +15,25 @@ class Favoritos extends Component{
             Promise.all(
                 parsedStorage.map(id =>{
                     return(
-                        fetch(`https://thingproxy.freeboard.io/fetch/https://api.deezer.com/track/${id}`)
+                        fetch(`https://rickandmortyapi.com/api/character/${id}`)
                         .then(resp => resp.json())
+                        .then(data => data)
                     )
                 })
             ).then(data => this.setState({
-                datos: data,
-                ready: true
+                personajesFavoritos: data
             }))
             .catch(err => console.log(err))
 
+            // this.setState({
+            //     personajesFavoritos: parsedStorage
+            // })
         }
     }
     
 
     render(){
         return(
-            <>
-            {
-
-            this.state.ready ? 
             <div>
                 {this.state.datos.map((cancion, idx) =>
                 <Cancion
@@ -44,11 +41,8 @@ class Favoritos extends Component{
                     info={cancion}
                 />)}
             </div>
-    : ''
-}
-            </>
         )
     }
 }
 
-export default Favoritos
+export default Favorites
