@@ -7,6 +7,7 @@ class Favoritos extends Component{
         this.state={
             datos: [],
             ready: false,
+            arrayAguardar: [],
         }
     }
 

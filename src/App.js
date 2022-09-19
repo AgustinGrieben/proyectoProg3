@@ -7,7 +7,9 @@ import CancionesPopulares from './screens/cancionesPopulares/CancionesPopulares'
 import AlbumesPopulares from './screens/albumesPopulares/AlbumesPopulares';
 import DetailCancion from './screens/DetailCancion/DetailCancion';
 import DetailAlbum from './screens/DetailAlbum/DetailAlbum';
+import Favorites from './screens/Favorites/Favorites';
 import NotFound from './screens/notFound/notFound';
+
 
 function App() {
   return (
@@ -23,6 +25,7 @@ function App() {
           <Route path="/albumesPopulares" component={AlbumesPopulares}/>
           <Route path="/DetailCancion/id/:id" component={DetailCancion}/>
           <Route path="/DetailAlbum/id/:id" component={DetailAlbum}/>
+          <Route path="/Favorites" component={Favorites}/>
           <Route path='' component={NotFound}/>
         </Switch>
       </main>

@@ -19,12 +19,6 @@ class DetalleCancion extends Component {
 })
  .catch(err => console.log('falla'))
  }
-    verMas(){
-        if(this.state.clase === "ocultar"){
-            this.setState({clase: "mostrar", texto:"Ver Menos"})
-        } else{this.setState({clase:"ocultar", texto:"Ver Más"})}
-    }
-
     render(){
         return(
             <> 
