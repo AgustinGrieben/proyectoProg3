@@ -5,7 +5,7 @@ function NotFound() {
     return(
         <React.Fragment>
             <div>
-                <img src="../img/error.jpg"/>
+                <img src="../img/error.jpg" alt=""/>
             </div>
         </React.Fragment>
     )
