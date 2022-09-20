@@ -12,6 +12,7 @@ class Cancion extends Component {
     }
 
     componentDidMount(){
+        console.log(this.props.datos)
         let storage = localStorage.getItem('favoritos')
         let parsedStorage = JSON.parse(storage)
         let isFavorite
@@ -65,7 +66,7 @@ let storageToString = JSON.stringify(filteredStorage)
     render(){
         return(
             
-
+            
             <React.Fragment> 
 
                 <div className="musica">
@@ -77,9 +78,9 @@ let storageToString = JSON.stringify(filteredStorage)
                 <p><Link to={"/DetailCancion/id/"+this.props.datos.id}>ver detalle de cancion</Link></p>
                 {
                         this.state.favorito ?
-                        <button onClick={() => this.removeFavorites(this.props.info.id)}>Sacar favoritos</button>
+                        <button onClick={() => this.removeFavorites(this.props.datos.id)}>Sacar favoritos</button>
                         :
-                        <button onClick={() => this.addFavorites(this.props.info.id)}>Favoritos</button>
+                        <button onClick={() => this.addFavorites(this.props.datos.id)}>Favoritos</button>
                     }
                 
                 </div>
